@@ -1,0 +1,197 @@
+// main: ../style.scss
+
+.userrank {
+  width: 100%;
+  .userrank-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    .thead {
+      border-bottom: 1px solid #ccc;
+    }
+    .current-user .list {
+      border-bottom: 1px solid #ccc;
+    }
+    .other-user {
+      overflow-y: scroll;
+      height: 65vh;
+    }
+    ul {
+      .list {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .leftblock {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+        }
+        .rightblock {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+      .user-rank {
+        width: vw-sp(100);
+        text-align: left;
+      }
+      .user-name {
+        width: 100%;
+        max-width: vw-sp(300);
+        display: flex;
+        align-items: center;
+        .userimg {
+          width: vw-sp(60);
+          margin-right: vw-sp(10);
+        }
+      }
+      .movie-rating {
+        width: vw-sp(260);
+        display: flex;
+        align-items: center;
+        .molecule {
+          font-size: vw-sp(36);
+        }
+        .denominator {
+          margin-right: 0;
+        }
+        .number {
+          width: vw-sp(180);
+        }
+      }
+      .test-rating {
+        width: vw-sp(260);
+        display: flex;
+        align-items: center;
+        .molecule {
+          font-size: vw-sp(36);
+        }
+        .denominator {
+          margin-right: 0;
+        }
+        .number {
+          margin-left: vw-sp(10);
+          width: vw-sp(180);
+        }
+      }
+    }
+    .thead .list {
+      height: auto;
+      padding: vw-sp(20) 0;
+    }
+    .tbody .list {
+      height: auto;
+      padding: vw-sp(20) 0;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .userrank {
+    .userrank-inner {
+      .other-user {
+        overflow-y: scroll;
+        height: 70vh;
+      }
+      ul {
+        .list {
+          flex-wrap: nowrap;
+        }
+        .user-rank {
+          width: vw-pc(60);
+          text-align: center;
+        }
+        .user-name {
+          max-width: vw-pc(300);
+          .userimg {
+            width: vw-pc(38);
+            margin-right: vw-pc(10);
+          }
+        }
+        .movie-rating {
+          width: vw-pc(260);
+          .molecule {
+            font-size: vw-pc(24);
+          }
+          .denominator {
+            margin-right: vw-pc(10);
+          }
+          .number {
+            width: auto;
+            margin: 0;
+          }
+        }
+        .test-rating {
+          width: vw-pc(260);
+          .molecule {
+            font-size: vw-pc(24);
+          }
+          .denominator {
+            margin-right: vw-pc(10);
+          }
+          .number {
+            width: auto;
+          }
+        }
+      }
+      .thead .list {
+        padding: 0;
+        height: vw-pc(40);
+      }
+      .tbody .list {
+        padding: 0;
+        height: vw-pc(60);
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .userrank {
+    .userrank-inner {
+      .other-user {
+        overflow-y: scroll;
+        height: 80vh;
+      }
+      ul {
+        .user-rank {
+          width: 60px;
+        }
+        .user-name {
+          max-width: 300px;
+          .userimg {
+            width: 38px;
+            margin-right: 10px;
+          }
+        }
+        .movie-rating {
+          width: 260px;
+          .molecule {
+            font-size: 24px;
+          }
+          .denominator {
+            margin-right: 10px;
+          }
+        }
+        .test-rating {
+          width: 260px;
+          .molecule {
+            font-size: 24px;
+          }
+          .denominator {
+            margin-right: 10px;
+          }
+        }
+      }
+      .thead .list {
+        height: 40px;
+      }
+      .tbody .list {
+        height: 60px;
+      }
+    }
+  }
+}

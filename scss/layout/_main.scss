@@ -1,0 +1,47 @@
+// main: ../style.scss
+
+/*  layout
+------------------------------------------------------------------------------*/
+.main {
+  margin: 0 auto vw-sp(50);
+  padding: 20px;
+  width: 100%;
+  background-color: $color-mainbg;
+}
+h2 {
+  margin-bottom: 10px;
+}
+i {
+  margin-right: 5px;
+}
+@media screen and (min-width: $breakpoint1) {
+  .main {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: vw-pc(20);
+    width: vw-pc(1210);
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: calc(100vh - 85px);
+  }
+  h2 {
+    margin-bottom: vw-pc(10);
+  }
+  i {
+    margin-right: vw-pc(5);
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .main {
+    padding: 20px;
+    width: 100%;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  i {
+    margin-right: 5px;
+  }
+}

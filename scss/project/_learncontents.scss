@@ -1,0 +1,93 @@
+// main: ../style.scss
+
+.learncontents {
+  .learncontents-inner {
+    display: block;
+    .cmn-btn--blue {
+      margin-top: vw-sp(20);
+    }
+  }
+  .learncontents-inner-bottom {
+    margin-top: vw-sp(10);
+    display: flex;
+    .inner {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .title {
+        font-size: vw-sp(20);
+      }
+      .molecule {
+        font-size: vw-sp(36);
+        margin-right: vw-sp(5);
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .learncontents {
+    .learncontents-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cmn-btn--blue {
+        margin-top: 0;
+      }
+    }
+    .learncontents-inner-bottom {
+      margin-top: vw-pc(10);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cmn-btn--blue {
+        margin-top: 0;
+      }
+      .inner {
+        align-items: flex-end;
+        justify-content: space-around;
+        .title {
+          font-size: vw-pc(16);
+        }
+        .molecule {
+          font-size: vw-pc(24);
+          margin-right: vw-pc(5);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .learncontents {
+    .learncontents-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cmn-btn--blue {
+        margin-top: 0;
+      }
+    }
+    .learncontents-inner-bottom {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cmn-btn--blue {
+        margin-top: 0;
+      }
+      .inner {
+        align-items: center;
+        justify-content: center;
+        .title {
+          font-size: 16px;
+          font-size: 1.6rem;
+        }
+        .molecule {
+          font-size: 24px;
+          margin-right: 5px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

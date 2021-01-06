@@ -1,0 +1,85 @@
+// main: ../style.scss
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  .progress-inner {
+    text-align: center;
+    width: vw-sp(300);
+    .result {
+      margin-bottom: vw-sp(10);
+    }
+    .chart-box {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .chart-cont {
+        width: vw-sp(113);
+        height: vw-sp(113);
+        position: relative;
+        p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: auto;
+          right: 0;
+          margin: auto;
+          text-align: center;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          font-size: vw-sp(20);
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .progress {
+    display: flex;
+    justify-content: space-between;
+    .progress-inner {
+      width: vw-pc(300);
+      text-align: center;
+      .result {
+        margin-bottom: vw-pc(10);
+      }
+      .chart-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .chart-cont {
+          width: vw-pc(113);
+          height: vw-pc(113);
+          position: relative;
+          p {
+            font-size: vw-pc(16);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .progress {
+    width: 50%;
+    .progress-inner {
+      width: calc(22vw - 1.5vw);
+      .result {
+        margin-bottom: 10px;
+      }
+      .chart-box {
+        .chart-cont {
+          width: 100%;
+          min-width: 120px;
+          height: 100%;
+          min-height: 120px;
+          p {
+            font-size: 16px;
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

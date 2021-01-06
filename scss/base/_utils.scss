@@ -1,0 +1,292 @@
+// main: ../style.scss
+
+/*  UTILIS
+------------------------------------------------------------------------------*/
+
+/*  配置
+-------------------------------------------------------*/
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.flexbox {
+  display: flex;
+}
+@media screen and (max-width: $breakpoint1-max) {
+  .flexbox {
+    display: block;
+  }
+}
+
+/*  テキスト
+-------------------------------------------------------*/
+.font2 {
+  font-family: $font2;
+  font-weight: 700;
+}
+.spacing {
+  font-feature-settings: normal;
+}
+.b {
+  font-weight: 600;
+}
+.f11 {
+  font-size: vw-sp(20);
+}
+.f13 {
+  font-size: vw-sp(22);
+}
+.f14 {
+  font-size: vw-sp(26);
+}
+.f16 {
+  font-size: vw-sp(30);
+}
+@media screen and (min-width: $breakpoint1) {
+  .f11 {
+    font-size: vw-pc(11);
+  }
+  .f13 {
+    font-size: vw-pc(13);
+  }
+  .f14 {
+    font-size: vw-pc(14);
+  }
+  .f16 {
+    font-size: vw-pc(16);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .f11 {
+    font-size: 1.1rem;
+  }
+  .f13 {
+    font-size: 1.3rem;
+  }
+  .f14 {
+    font-size: 1.4rem;
+  }
+  .f16 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 表示非表示
+-------------------------------------------------------*/
+
+@media screen and (max-width: $breakpoint1-max) {
+  .none--sp {
+    display: none !important;
+  }
+  .br__sp {
+    display: block;
+  }
+  .br--pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .none--pc {
+    display: none !important;
+  }
+  .br__sp {
+    display: inline;
+  }
+  .br--sp {
+    display: none;
+  }
+}
+
+/*  ボックス
+-------------------------------------------------------*/
+
+.box {
+  background-color: $color-base;
+  padding: 20px;
+}
+@media screen and (min-width: $breakpoint1) {
+  .box {
+    padding: vw-pc(20);
+    margin-bottom: vw-pc(10);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .box {
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+}
+/*  画像
+-------------------------------------------------------*/
+
+.img--fit {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*  フォーム
+-------------------------------------------------------*/
+input[type="file"],
+input[type="submit"],
+input[type="radio"] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+input[type="radio"] + span {
+  position: relative;
+}
+input[type="radio"] + span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  display: block;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+input[type="radio"]:checked + span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  display: block;
+  background-color: $color-blue;
+  transform: translateY(-50%);
+}
+.input-text {
+  padding: 0 vw-sp(20);
+  height: vw-sp(70);
+  background-color: #f8f8f8;
+  border: vw-sp(2) solid $color-blue;
+  border-radius: vw-sp(5);
+  width: 100%;
+  margin-right: vw-sp(10);
+  font-size: vw-sp(28);
+}
+label span.btn {
+  font-weight: 600;
+  background-color: $color-blue;
+  color: $color-base;
+  border: vw-sp(2) solid $color-blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: vw-sp(5);
+  transition: 0.3s all ease;
+}
+label span.btn:hover {
+  cursor: pointer;
+  background-color: $color-base;
+  color: $color-blue;
+}
+@media screen and (min-width: $breakpoint1) {
+  .input-text {
+    padding: 0 vw-pc(10);
+    height: vw-pc(35);
+    border: vw-pc(1) solid $color-blue;
+    border-radius: vw-pc(5);
+    margin-right: vw-pc(10);
+    font-size: vw-pc(14);
+  }
+  label span.btn {
+    border: vw-pc(1) solid $color-blue;
+    border-radius: vw-pc(5);
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .input-text {
+    padding: 0 10px;
+    height: 35px;
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  label span.btn {
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+  }
+}
+
+/*  その他
+-------------------------------------------------------*/
+.smooth {
+  color: $color-green;
+}
+.attention {
+  color: $color-orange;
+}
+.caution {
+  color: $color-red;
+}
+.bar-out {
+  margin-right: vw-sp(5);
+  width: calc(100% - 1em);
+  height: vw-sp(17);
+  position: relative;
+  border: vw-sp(2) solid;
+  .bar-in {
+    height: vw-sp(15);
+    position: relative;
+    top: 0;
+    border: vw-sp(3) solid;
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .bar-out {
+    margin-right: vw-pc(5);
+    width: vw-pc(100);
+    height: vw-pc(17);
+    border: vw-pc(2) solid;
+    .bar-in {
+      height: vw-pc(15);
+      border: vw-pc(3) solid;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .bar-out {
+    margin-right: 5px;
+    width: 170px;
+    height: 17px;
+    border: 2px solid;
+    .bar-in {
+      height: 15px;
+      border: 3px solid;
+    }
+  }
+}
+.bar-smooth {
+  background-color: $color-base;
+  border-color: $color-blue;
+  .bar-in {
+    background-color: $color-blue;
+    border-color: $color-blue;
+  }
+}
+.bar-attention {
+  background-color: $color-base;
+  border-color: $color-orange;
+  .bar-in {
+    background-color: $color-orange;
+    border-color: $color-orange;
+  }
+}
+.bar-caution {
+  background-color: $color-base;
+  border-color: $color-red;
+  .bar-in {
+    background-color: $color-red;
+    border-color: $color-red;
+  }
+}

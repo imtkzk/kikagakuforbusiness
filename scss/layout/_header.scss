@@ -1,0 +1,121 @@
+// main: ../style.scss
+
+/*  header
+------------------------------------------------------------------------------*/
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: vw-sp(130);
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  position: relative;
+  width: vw-sp(300);
+  padding: 0 vw-sp(20);
+}
+.header-logo h1 {
+  height: 100%;
+}
+.header-logo h1 a {
+  height: 100%;
+}
+
+/* ----------------- トグルボタン - */
+/*ボタン*/
+.hamburger_btn {
+  position: fixed;
+  /*常に最上部に表示したいので固定*/
+  top: 0;
+  right: 0;
+  width: vw-sp(130);
+  height: vw-sp(130);
+  cursor: pointer;
+  z-index: 50;
+}
+
+.hamburger_btn .line {
+  position: absolute;
+  top: 0;
+  left: vw-sp(40);
+  width: vw-sp(64);
+  height: vw-sp(4);
+  background: $color-blue;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: vw-sp(40);
+  transition: 0.4s ease;
+}
+
+.hamburger_btn .line_02 {
+  top: vw-sp(60);
+  transition: 0.4s ease;
+}
+
+.hamburger_btn .line_03 {
+  top: vw-sp(80);
+  transition: 0.4s ease;
+}
+
+.btn_line01 {
+  background: $color-base !important;
+  transform: translateY(vw-sp(20)) rotate(-45deg);
+  transition: 0.4s ease;
+}
+
+.btn_line02 {
+  transition: 0.4s ease;
+  opacity: 0;
+}
+
+.btn_line03 {
+  background: $color-base !important;
+  transform: translateY(vw-sp(-20)) rotate(45deg);
+  transition: 0.4s ease;
+}
+.menu-enter-active,
+.menu-leave-active {
+  transition: opacity 0.3s;
+}
+
+.menu-enter,
+.menu-leave-to {
+  opacity: 0;
+}
+
+.menu-leave,
+.menu-enter-to {
+  opacity: 1;
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .header {
+    justify-content: space-between;
+    height: vw-pc(65);
+    padding: 0 vw-pc(20);
+  }
+  .header-logo {
+    width: vw-pc(242);
+    padding: 0;
+  }
+  #hamburger {
+    display: none;
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .header {
+    padding: 20px;
+    height: 65px;
+  }
+  .header-logo {
+    padding: 0 20px;
+    width: 242px;
+  }
+}

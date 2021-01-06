@@ -1,0 +1,171 @@
+// main: ../style.scss
+
+#masterMember .main .flexbox {
+  width: 100%;
+  .rightcont {
+    width: 100%;
+    overflow-y: scroll;
+    height: auto;
+    padding-bottom: vw-sp(50);
+  }
+}
+.memberlist {
+  width: 100%;
+  text-align: center;
+  padding-top: vw-sp(20);
+  padding-bottom: vw-sp(20);
+  .thead li {
+    height: vw-sp(40);
+  }
+  .tbody {
+    overflow-y: scroll;
+    height: 18vh;
+    .current-member li {
+      background-color: $color-blue;
+      color: $color-base;
+      .bar-out {
+        border: vw-sp(2) solid $color-base;
+        .bar-in {
+          height: vw-sp(13);
+        }
+      }
+    }
+  }
+  .tbody li {
+    height: vw-sp(70);
+  }
+  ul {
+    li {
+      padding: 0 vw-sp(15);
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #ccc;
+    }
+    a:last-child li {
+      border-bottom: none;
+    }
+    .user-name {
+      width: 100%;
+      max-width: vw-sp(370);
+      display: flex;
+      align-items: center;
+      .userimg {
+        width: vw-sp(40);
+        height: vw-sp(40);
+        margin-right: vw-sp(10);
+        background-color: $color-base;
+        border-radius: 50%;
+      }
+    }
+    .movie-rating {
+      width: vw-sp(120);
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+#masterMember .learn-progress .learn-progress-inner .tbody-wrap {
+  overflow-y: initial;
+  max-height: 100%;
+}
+@media screen and (min-width: $breakpoint1) {
+  #masterMember .main .flexbox {
+    width: 100%;
+    .rightcont {
+      width: vw-pc(700);
+      margin-left: vw-pc(10);
+      height: 86vh;
+      padding-bottom: 0;
+    }
+  }
+  .memberlist {
+    width: vw-pc(460);
+    padding-top: 0;
+    padding-bottom: 0;
+    .thead li {
+      height: vw-pc(40);
+    }
+    .tbody {
+      height: 81vh;
+      .current-member li {
+        .bar-out {
+          border: vw-pc(2) solid $color-base;
+          .bar-in {
+            height: vw-pc(13);
+          }
+        }
+      }
+    }
+    .tbody li {
+      height: vw-pc(70);
+    }
+    ul {
+      li {
+        padding: 0 vw-pc(10);
+      }
+      .user-name {
+        width: 100%;
+        max-width: vw-pc(200);
+        .userimg {
+          width: vw-pc(40);
+          height: vw-pc(40);
+          margin-right: vw-pc(10);
+          border: vw-pc(2) solid $color-base;
+        }
+      }
+      .movie-rating {
+        width: vw-pc(160);
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  #masterMember .main .flexbox {
+    width: 100%;
+    .rightcont {
+      width: 50%;
+      margin-left: 10px;
+      height: 86vh;
+    }
+  }
+  .memberlist {
+    width: calc(50% - 10px);
+    .thead li {
+      height: 40px;
+    }
+    .tbody {
+      height: 81vh;
+      .current-member li {
+        .bar-out {
+          border: 2px solid $color-base;
+          .bar-in {
+            height: 13px;
+          }
+        }
+      }
+    }
+    .tbody li {
+      height: 70px;
+    }
+    ul {
+      li {
+        padding: 0 10px;
+      }
+      .user-name {
+        width: 100%;
+        max-width: 200px;
+        .userimg {
+          width: 40px;
+          height: 40px;
+          border: 2px solid $color-base;
+        }
+      }
+      .movie-rating {
+        width: 160px;
+      }
+    }
+  }
+}

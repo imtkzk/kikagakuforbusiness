@@ -1,0 +1,33 @@
+// main: ../style.scss
+.learn-status {
+  margin-top: vw-sp(20);
+}
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: vw-sp(1) solid #ccc;
+  width: vw-sp(260);
+  height: vw-sp(50);
+  margin-left: auto;
+  margin-bottom: vw-sp(20);
+}
+@media screen and (min-width: $breakpoint1) {
+  .learn-status {
+    margin-top: 0;
+  }
+  .date-picker {
+    border: vw-pc(1) solid #ccc;
+    width: vw-pc(183);
+    height: vw-pc(30);
+    margin-bottom: vw-pc(20);
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .date-picker {
+    border: 1px solid #ccc;
+    width: 183px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}

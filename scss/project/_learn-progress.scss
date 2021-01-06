@@ -1,0 +1,179 @@
+// main: ../style.scss
+
+.learn-progress {
+  margin-top: vw-sp(20);
+  .learn-progress-inner {
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    .thead {
+      border-bottom: 1px solid #ccc;
+    }
+    .tbody-wrap {
+      max-height: vw-sp(340);
+      overflow-y: scroll;
+    }
+    .tbody {
+      border-bottom: 1px solid #ccc;
+    }
+    .tbody:last-child {
+      border: none;
+    }
+    ul {
+      li {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: vw-sp(10) 0;
+        .inner {
+          display: none;
+        }
+      }
+      li.btnClick:hover {
+        cursor: pointer;
+        background-color: #f8f8f8;
+      }
+      .course-name {
+        width: 100%;
+      }
+      .movie-rating {
+        width: vw-sp(250);
+        display: flex;
+        align-items: center;
+      }
+    }
+    .test-rating {
+      width: vw-sp(260);
+      text-align: center;
+      .molecule {
+        font-size: vw-sp(36);
+      }
+    }
+    .innercontents {
+      padding-left: vw-sp(10);
+    }
+  }
+}
+
+/* ---------------------------------- accordion */
+.tbody {
+  position: relative;
+}
+.btnClick .contents-title::after {
+  content: "▼";
+  color: $color-blue;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+.innercontents .btnClick .contents-title::after {
+  content: "＋";
+  font-weight: 800;
+}
+@media screen and (min-width: $breakpoint1) {
+  .btnClick .contents-title::after {
+    right: vw-pc(330);
+  }
+  .contents-title::after {
+    right: vw-pc(330);
+  }
+}
+.btnClick.is-active .contents-title::after {
+  content: "▲";
+}
+.innercontents .btnClick.is-active .contents-title::after {
+  content: "−";
+}
+.innercontents {
+  display: none;
+}
+.innercontents.is-open {
+  display: block;
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .learn-progress {
+    margin-top: 0;
+    .learn-progress-inner {
+      .tbody-wrap {
+        max-height: vw-pc(340);
+      }
+      .tbody:last-child {
+        border: none;
+      }
+      ul {
+        li {
+          height: vw-pc(50);
+          padding: 0;
+        }
+        .course-name {
+          max-width: vw-pc(350);
+        }
+        .movie-rating {
+          width: vw-pc(210);
+        }
+      }
+      .test-rating {
+        width: vw-pc(100);
+        .molecule {
+          font-size: vw-pc(24);
+        }
+      }
+      .innercontents {
+        padding-left: vw-pc(10);
+        .course-name {
+          max-width: vw-pc(340);
+        }
+        .innercontents {
+          .course-name {
+            max-width: vw-pc(330);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .learn-progress {
+    .learn-progress-inner {
+      .tbody-wrap {
+        max-height: 340px;
+      }
+      .tbody:last-child {
+        border: none;
+      }
+      ul {
+        li {
+          height: 50px;
+          justify-content: space-between;
+        }
+        .course-name {
+          max-width: 350px;
+        }
+        .movie-rating {
+          width: 210px;
+        }
+      }
+      .test-rating {
+        width: 100px;
+        .molecule {
+          font-size: 24px;
+        }
+      }
+      .innercontents {
+        padding-left: 10px;
+        .course-name {
+          max-width: 340px;
+        }
+        .innercontents {
+          .course-name {
+            max-width: 330px;
+          }
+        }
+      }
+    }
+  }
+}

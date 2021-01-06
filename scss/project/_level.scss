@@ -1,0 +1,68 @@
+// main: ../style.scss
+.level-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .level-box {
+    width: 100%;
+    margin-right: vw-sp(10);
+    margin-bottom: vw-sp(10);
+    .level-title {
+      margin-bottom: vw-sp(10);
+    }
+    .level-threestar {
+      color: $color-blue;
+      font-size: vw-sp(36);
+      letter-spacing: vw-sp(6);
+    }
+  }
+}
+.level-b {
+  margin-top: vw-sp(10);
+}
+@media screen and (min-width: $breakpoint1) {
+  #userSkills .main {
+    padding-right: vw-pc(10);
+    overflow-y: scroll;
+    height: calc(100vh - 65px);
+  }
+  .level-cont {
+    .level-box {
+      width: vw-pc(225);
+      margin-right: vw-pc(10);
+      margin-bottom: 0;
+      .level-title {
+        margin-bottom: vw-pc(10);
+      }
+      .level-threestar {
+        font-size: vw-pc(24);
+        letter-spacing: vw-pc(6);
+      }
+    }
+  }
+  .level-b {
+    margin-top: vw-pc(10);
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  #userSkills .main {
+    padding-right: 10px;
+  }
+  .level-cont {
+    .level-box {
+      width: 225px;
+      margin-right: 10px;
+      .level-title {
+        margin-bottom: 10px;
+      }
+      .level-threestar {
+        font-size: 24px;
+        letter-spacing: 6px;
+      }
+    }
+  }
+  .level-b {
+    margin-top: 10px;
+  }
+}

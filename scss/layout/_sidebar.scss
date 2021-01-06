@@ -1,0 +1,199 @@
+// main: ../style.scss
+
+/*  sidebar
+------------------------------------------------------------------------------*/
+
+.sidebar {
+  @include gradi;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  .nav {
+    position: relative;
+    top: vw-sp(120);
+    li {
+      margin-bottom: vw-sp(10);
+      width: 100%;
+    }
+    a {
+      color: $color-base;
+      padding-left: vw-sp(52);
+      height: vw-sp(100);
+      font-weight: 600;
+      display: block;
+      display: flex;
+      align-items: center;
+      i {
+        margin-right: vw-sp(5);
+      }
+    }
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    li.current a {
+      background-color: $color-mainbg;
+      color: $color-blue;
+    }
+  }
+}
+.sidebar-bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 3em;
+  color: #fff;
+  .user {
+    text-align: center;
+    margin-bottom: vw-sp(20);
+    .userimg {
+      width: vw-sp(120);
+      height: vw-sp(120);
+      margin: 0 auto vw-sp(15);
+      border-radius: 50%;
+      border: vw-sp(2) solid #fff;
+      background-color: #fff;
+    }
+    .username {
+      margin-bottom: vw-sp(10);
+    }
+  }
+  .date {
+    margin-bottom: vw-sp(20);
+    text-align: center;
+    .start {
+      margin-bottom: vw-sp(10);
+    }
+  }
+  .support {
+    text-align: center;
+    padding: vw-sp(10) 0 vw-sp(20);
+    border-top: 1px solid #b3dbe8;
+    width: 80%;
+    margin: 0 auto;
+    a {
+      padding: 0 vw-sp(5);
+    }
+    i {
+      color: #b3dbe8;
+      margin-right: vw-sp(5);
+    }
+  }
+  .title {
+    color: #b3dbe8;
+    margin-right: vw-sp(5);
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .sidebar {
+    position: relative;
+    height: calc(100vh - 65px);
+    width: vw-pc(230);
+    .nav {
+      position: relative;
+      top: vw-pc(60);
+      li {
+        margin-bottom: vw-pc(10);
+      }
+      a {
+        padding-left: vw-pc(52);
+        height: vw-pc(60);
+        i {
+          margin-right: vw-pc(5);
+        }
+      }
+    }
+  }
+  .sidebar-bottom {
+    bottom: 0;
+    .user {
+      margin-bottom: vw-pc(20);
+      .userimg {
+        width: vw-pc(60);
+        height: vw-pc(60);
+        margin: 0 auto vw-pc(15);
+        border: vw-pc(2) solid #fff;
+      }
+      .username {
+        margin-bottom: vw-pc(10);
+      }
+    }
+    .date {
+      margin-bottom: vw-pc(20);
+      .start {
+        margin-bottom: vw-pc(10);
+      }
+    }
+    .support {
+      padding: vw-pc(10) 0 vw-pc(20);
+      border-top: 1px solid #b3dbe8;
+      width: vw-pc(160);
+      a {
+        padding: 0 vw-pc(5);
+      }
+      i {
+        margin-right: vw-pc(5);
+      }
+    }
+    .title {
+      margin-right: vw-pc(5);
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .sidebar {
+    @include gradi;
+    width: 230px;
+    .nav {
+      top: 60px;
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        padding-left: 52px;
+        height: 60px;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .sidebar-bottom {
+    .user {
+      margin-bottom: 20px;
+      .userimg {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 15px;
+        border: 2px solid #fff;
+      }
+      .username {
+        margin-bottom: 10px;
+      }
+    }
+    .date {
+      margin-bottom: 20px;
+      .start {
+        margin-bottom: 10px;
+      }
+    }
+    .support {
+      padding: 10px 0 20px;
+      border-top: 1px solid #b3dbe8;
+      width: 160px;
+      margin: 0 auto;
+      a {
+        padding: 0 5px;
+      }
+      i {
+        color: #b3dbe8;
+        margin-right: 5px;
+      }
+    }
+    .title {
+      color: #b3dbe8;
+      margin-right: 5px;
+    }
+  }
+}

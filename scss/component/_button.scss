@@ -1,0 +1,68 @@
+// main: ../style.scss
+
+/*  button
+------------------------------------------------------------------------------*/
+
+/* ---------------------------------- btn */
+
+.cmn-btn--blue a {
+  height: vw-sp(60);
+  padding: 0 vw-sp(30);
+  background-color: $color-blue;
+  color: $color-base;
+  border: 2px solid $color-blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cmn-btn--blue a:hover {
+  background-color: $color-base;
+  color: $color-blue;
+}
+
+.cmn-btn--white a {
+  height: vw-sp(60);
+  padding: 0 vw-sp(30);
+  background-color: $color-base;
+  color: $color-blue;
+  border: 2px solid $color-blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cmn-btn--white a:hover {
+  background-color: $color-blue;
+  color: $color-base;
+}
+
+@media screen and (min-width: $breakpoint1) {
+  .cmn-btn--blue a {
+    height: vw-pc(40);
+    padding: 0 vw-pc(20);
+    border: vw-pc(2) solid $color-blue;
+    border-radius: vw-pc(5);
+  }
+  .cmn-btn--white a {
+    height: vw-pc(40);
+    padding: 0 vw-pc(20);
+    border: vw-pc(2) solid $color-blue;
+    border-radius: vw-pc(5);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .cmn-btn--blue a {
+    height: 40px;
+    padding: 0 20px;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+  }
+  .cmn-btn--white a {
+    height: 40px;
+    padding: 0 20px;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+  }
+}

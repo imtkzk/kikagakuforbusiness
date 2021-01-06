@@ -1,0 +1,326 @@
+// main: ../style.scss
+
+#masterQuestionnaire #tab {
+  position: relative;
+  top: 10px;
+}
+.masterquestionnaire {
+  width: 100%;
+  .contents-title {
+    width: 100%;
+    margin-right: vw-sp(10);
+    margin-bottom: vw-sp(20);
+    height: max-content;
+  }
+  .course-under {
+    padding-left: vw-sp(20);
+    position: relative;
+  }
+  .course-under:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+    position: absolute;
+    left: 0;
+    color: #ccc;
+  }
+}
+#tab {
+  width: 100%;
+  canvas {
+    margin-top: vw-sp(20);
+  }
+}
+.flexbox {
+  justify-content: space-between;
+}
+.tabmenu {
+  input {
+    display: none;
+  }
+  input + label {
+    padding: vw-sp(10) vw-sp(25) vw-sp(14);
+    margin-right: vw-sp(10);
+  }
+  input + label:hover {
+    cursor: pointer;
+  }
+  .tabs {
+    height: vw-sp(70);
+  }
+  input:checked + label {
+    margin-right: vw-sp(10);
+    background-color: $color-base;
+    color: $color-blue;
+    font-weight: 600;
+  }
+}
+.aggregate {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .aggregate-box {
+    width: 100%;
+    margin-top: vw-sp(20);
+    margin-bottom: vw-sp(20);
+    ul {
+      margin-top: vw-sp(20);
+      margin-bottom: vw-sp(20);
+      li {
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        padding: 0 vw-sp(10);
+        height: vw-sp(60);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .molecule {
+          font-size: vw-sp(36);
+        }
+      }
+    }
+  }
+}
+.individual {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100vw;
+  overflow-x: scroll;
+  .user {
+    height: auto;
+  }
+  ul {
+    width: 100vw;
+    .list {
+      width: 100vw;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .leftblock {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        height: 100%;
+      }
+      .rightblock {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        height: 100%;
+      }
+    }
+    .user-name {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      .userimg {
+        width: vw-sp(60);
+        margin-right: vw-sp(10);
+      }
+    }
+    .user-belong {
+      width: 100vw;
+      max-width: vw-sp(300);
+    }
+    .satisfaction,
+    .comprehension,
+    .difficulty {
+      width: vw-sp(100);
+      text-align: center;
+    }
+    .comment {
+      width: 100vw;
+      padding-right: 10vw;
+    }
+  }
+  .thead .list {
+    height: vw-sp(60);
+  }
+  .tbody .list {
+    height: vw-sp(100);
+  }
+  .tbody .list:last-child .leftblock,
+  .tbody .list:last-child .rightblock {
+    border: none;
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  #masterQuestionnaire #tab {
+    top: vw-pc(10);
+  }
+  .masterquestionnaire {
+    width: 100%;
+    .contents-title {
+      width: vw-pc(320);
+      margin-right: vw-pc(10);
+      margin-bottom: 0;
+    }
+    .course-under {
+      padding-left: vw-pc(20);
+    }
+  }
+  #tab {
+    width: 100%;
+    canvas {
+      margin-top: vw-pc(20);
+    }
+  }
+  .tabmenu {
+    input + label {
+      padding: vw-pc(10) vw-pc(25) vw-pc(14);
+      margin-right: vw-pc(10);
+    }
+    .tabs {
+      height: vw-pc(35);
+    }
+    input:checked + label {
+      margin-right: vw-pc(10);
+    }
+  }
+  .aggregate {
+    .aggregate-box {
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: vw-pc(20);
+      ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        li {
+          border-bottom: 1px solid #ccc;
+          width: 90%;
+          padding: 0 vw-pc(10);
+          height: vw-pc(60);
+          .molecule {
+            font-size: vw-pc(24);
+          }
+        }
+      }
+    }
+  }
+  .individual {
+    overflow-x: hidden;
+    width: 100%;
+    .user {
+      overflow-y: scroll;
+      height: 75vh;
+    }
+    ul {
+      width: 100%;
+      .user-name {
+        width: 60%;
+        max-width: vw-pc(300);
+        .userimg {
+          width: vw-pc(38);
+          margin-right: vw-pc(10);
+        }
+      }
+      .user-belong {
+        width: 40%;
+      }
+      .satisfaction,
+      .comprehension,
+      .difficulty {
+        width: vw-pc(60);
+      }
+      .comment {
+        width: vw-pc(320);
+        padding-right: 0;
+      }
+    }
+    .thead .list {
+      width: 100%;
+      height: vw-pc(40);
+    }
+    .tbody .list {
+      width: 100%;
+      height: vw-pc(70);
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  #masterQuestionnaire #tab {
+    top: 10px;
+  }
+  .masterquestionnaire {
+    width: 100%;
+    .contents-title {
+      width: 320px;
+      margin-right: 10px;
+    }
+    .course-under {
+      padding-left: 20px;
+    }
+  }
+  #tab {
+    width: 100%;
+    canvas {
+      margin-top: 20px;
+    }
+  }
+  .tabmenu {
+    input + label {
+      padding: 10px 25px 14px;
+      margin-right: 10px;
+    }
+    .tabs {
+      height: 35px;
+    }
+    input:checked + label {
+      margin-right: 10px;
+    }
+  }
+  .aggregate {
+    .aggregate-box {
+      width: 50%;
+      margin-bottom: 20px;
+      ul {
+        li {
+          border-bottom: 1px solid #ccc;
+          width: 90%;
+          padding: 0 10px;
+          height: 60px;
+          .molecule {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+  .individual {
+    .user {
+      overflow-y: scroll;
+      height: 75vh;
+    }
+    ul {
+      .user-name {
+        width: 60%;
+        max-width: 300px;
+        .userimg {
+          width: 38px;
+          margin-right: 10px;
+        }
+      }
+      .user-belong {
+        width: 40%;
+      }
+      .satisfaction,
+      .comprehension,
+      .difficulty {
+        width: 60px;
+      }
+      .comment {
+        width: 320px;
+      }
+    }
+    .thead .list {
+      height: 40px;
+    }
+    .tbody .list {
+      height: 70px;
+    }
+  }
+}

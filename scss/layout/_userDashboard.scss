@@ -1,0 +1,66 @@
+// main: ../style.scss
+
+/*  userDashboard
+------------------------------------------------------------------------------*/
+#userDashboard {
+  .main {
+    height: auto;
+  }
+  .learncontents {
+    width: 100%;
+  }
+  .learn-status {
+    width: 100%;
+  }
+  .learn-progress {
+    width: 100%;
+    .tbody-wrap {
+      max-height: 100%;
+    }
+  }
+  .progress {
+    width: 100%;
+    margin-top: vw-sp(20);
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  #userDashboard {
+    .main {
+      height: calc(100vh - 85px);
+    }
+    .learncontents {
+      width: vw-pc(550);
+    }
+    .learn-status {
+      width: vw-pc(445);
+    }
+    .learn-progress {
+      width: vw-pc(710);
+      .tbody-wrap {
+        max-height: vw-pc(340);
+      }
+    }
+    .progress {
+      width: vw-pc(610);
+      margin-top: 0;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  #userDashboard {
+    .learncontents {
+      width: 50%;
+    }
+    .learn-status {
+      width: calc(50% - 10px);
+      margin-top: 10px;
+    }
+    .learn-progress {
+      width: 50%;
+      margin-top: 10px;
+    }
+    .progress {
+      width: calc(50% - 10px);
+    }
+  }
+}

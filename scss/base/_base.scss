@@ -1,0 +1,63 @@
+// main: ../style.scss
+
+/*  THEME CSS
+------------------------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: $color-text;
+  background-color: #f8f8f8;
+  font-family: $font1;
+  font-size: vw-sp(26);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.025em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  font-feature-settings: "palt";
+}
+
+input::placeholder {
+  color: #ccc;
+}
+/* IE */
+input:-ms-input-placeholder {
+  color: #ccc;
+}
+/* Edge */
+input::-ms-input-placeholder {
+  color: #ccc;
+}
+@media screen and (min-width: $breakpoint1) {
+  body {
+    font-size: vw-pc(14);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  body {
+    font-size: 1.4em;
+  }
+}
+
+/*  リンク
+-------------------------------------------------------*/
+
+a {
+  transition: all 0.3s;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/*  チャート
+-------------------------------------------------------*/
+canvas {
+  width: 100%;
+}

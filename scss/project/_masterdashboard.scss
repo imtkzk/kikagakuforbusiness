@@ -1,0 +1,298 @@
+// main: ../style.scss
+
+.masterdashboard {
+  width: 100%;
+  #tab {
+    margin-top: vw-sp(100);
+    width: 100%;
+  }
+  .flexbox {
+    justify-content: space-between;
+  }
+  .download-report {
+    background-color: #ebf7f8;
+    height: vw-sp(50);
+    width: vw-sp(300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: vw-sp(5);
+    transition: 0.3s all ease;
+    position: relative;
+    bottom: vw-sp(140);
+  }
+  .download-report:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .tabmenu {
+    input {
+      display: none;
+    }
+    input + label {
+      padding: vw-sp(30) vw-sp(25) vw-sp(30);
+      margin-right: vw-sp(10);
+    }
+    input + label:hover {
+      cursor: pointer;
+    }
+    .tabs {
+      height: vw-sp(35);
+    }
+    input:checked + label {
+      margin-right: vw-sp(10);
+      background-color: $color-base;
+      color: $color-blue;
+      font-weight: 600;
+    }
+  }
+  .masterdashboard-inner {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 100%;
+    .list {
+      border-bottom: 1px solid #ccc;
+    }
+    .user {
+      overflow-y: scroll;
+      height: auto;
+    }
+    ul {
+      .list {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .leftblock {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%;
+        }
+        .rightblock {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+      .user-rank {
+        width: vw-sp(60);
+        text-align: center;
+      }
+      .user-name {
+        width: 100%;
+        max-width: vw-sp(300);
+        margin-right: vw-sp(10);
+        display: flex;
+        align-items: center;
+        .userimg {
+          width: vw-sp(60);
+          margin-right: vw-sp(10);
+        }
+      }
+      .movie-rating {
+        width: vw-sp(160);
+        .molecule {
+          font-size: vw-sp(36);
+        }
+        .denominator {
+          margin-right: vw-sp(10);
+        }
+      }
+      .test-rating {
+        width: vw-sp(160);
+        .molecule {
+          font-size: vw-sp(36);
+        }
+        .denominator {
+          margin-right: vw-sp(10);
+        }
+      }
+      .alert {
+        width: vw-sp(180);
+        text-align: center;
+        .close {
+          background-color: #f8f8f8;
+          border-radius: 50%;
+          width: vw-sp(15);
+          height: vw-sp(15);
+          margin-left: vw-sp(5);
+        }
+      }
+    }
+    .thead .list {
+      padding: vw-sp(10) 0;
+    }
+    .tbody .list {
+      padding: vw-sp(20) 0;
+    }
+    .tbody .list:last-child {
+      border: none;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .masterdashboard {
+    width: 100%;
+    #tab {
+      margin-top: 0;
+    }
+    .download-report {
+      height: vw-pc(25);
+      width: vw-pc(170);
+      border-radius: vw-pc(5);
+      position: initial;
+    }
+    .tabmenu {
+      input + label {
+        padding: vw-pc(10) vw-pc(25) vw-pc(14);
+      }
+      .tabs {
+        height: vw-pc(35);
+      }
+      input:checked + label {
+        margin-right: vw-pc(10);
+      }
+    }
+    .masterdashboard-inner {
+      width: 100%;
+      .list {
+        border-bottom: 1px solid #ccc;
+      }
+      .user {
+        height: 75vh;
+      }
+      ul {
+        .list {
+          flex-wrap: initial;
+          width: 100%;
+          .leftblock {
+            width: 100%;
+          }
+        }
+        .user-rank {
+          width: vw-pc(60);
+        }
+        .user-name {
+          width: 100%;
+          max-width: vw-pc(300);
+          margin-right: vw-pc(10);
+          .userimg {
+            width: vw-pc(38);
+            margin-right: vw-pc(10);
+          }
+        }
+        .movie-rating {
+          display: flex;
+          align-items: center;
+          width: vw-pc(260);
+          .molecule {
+            font-size: vw-pc(24);
+          }
+          .denominator {
+            margin-right: vw-pc(10);
+          }
+        }
+        .test-rating {
+          display: flex;
+          align-items: center;
+          width: vw-pc(260);
+          .molecule {
+            font-size: vw-pc(24);
+          }
+          .denominator {
+            margin-right: vw-pc(10);
+          }
+        }
+        .alert {
+          width: vw-pc(110);
+          .close {
+            width: vw-pc(15);
+            height: vw-pc(15);
+            margin-left: vw-pc(5);
+          }
+        }
+      }
+      .thead .list {
+        height: vw-pc(40);
+        padding: 0;
+      }
+      .tbody .list {
+        height: vw-pc(60);
+        padding: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .masterdashboard {
+    .download-report {
+      height: 25px;
+      width: 170px;
+      border-radius: 5px;
+    }
+    .tabmenu {
+      input + label {
+        padding: 10px 25px 14px;
+        margin-right: 10px;
+      }
+      .tabs {
+        height: 35px;
+      }
+      input:checked + label {
+        margin-right: 10px;
+      }
+    }
+    .masterdashboard-inner {
+      .user {
+        height: 75vh;
+      }
+      ul {
+        .user-rank {
+          width: 60px;
+        }
+        .user-name {
+          margin-right: 10px;
+          .userimg {
+            width: 38px;
+            margin-right: 10px;
+          }
+        }
+        .movie-rating {
+          width: 360px;
+          .molecule {
+            font-size: 24px;
+          }
+          .denominator {
+            margin-right: 10px;
+          }
+        }
+        .test-rating {
+          width: 360px;
+          .molecule {
+            font-size: 24px;
+          }
+          .denominator {
+            margin-right: 10px;
+          }
+        }
+        .alert {
+          width: 110px;
+          .close {
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+          }
+        }
+      }
+      .thead .list {
+        height: 40px;
+      }
+      .tbody .list {
+        height: 60px;
+      }
+    }
+  }
+}

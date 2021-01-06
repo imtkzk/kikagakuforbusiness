@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>キカガク For Business</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body id="userCourse">
+  <header id="header" class="header">
+    <div class="header-logo">
+      <h1 class="font2 spacing"><a href="#"><img src="img/common/headerlogo.png" srcset="img/common/headerlogo.png 1x,img/common/headerlogo-2x.png 2x" class="img--fit" alt="キカガクForBusiness"></a></h1>
+    </div>
+    <div class="cmn-btn--white">
+      <a href="#" class="b f14 spacing">学習中画面へ</a>
+    </div>
+    <div id="hamburger">
+      <div class="hamburger_btn" @click='ActiveBtn=!ActiveBtn'>
+        <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+        <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+        <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+      </div>
+      <transition name="menu">
+        <div class="menu" v-show="ActiveBtn">
+          <aside class="sidebar">
+            <div class="nav">
+              <ul>
+                <li><a href="userDashboard.html"><i class="fas fa-tachometer-alt"></i>ダッシュボード</a></li>
+                <li><a href="userSkills.html"><i class="fas fa-file-alt"></i>習得スキル一覧</a></li>
+                <li><a href="userRank.html"><i class="fas fa-random"></i>ランキング</a></li>
+                <li class="current"><a href="userCourse.html"><i class="fas fa-tasks"></i>コース一覧</a></li>
+                <li><a href="userConfig.html"><i class="fas fa-cog"></i>設定</a></li>
+              </ul>
+            </div>
+            <div class="sidebar-bottom">
+              <div class="user">
+                <div class="username b f13"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                <div class="userbelong"><span class="f11 title">所属</span><span class="f13">研修事業部</span></div>
+              </div>
+              <div class="date">
+                <div class="start"><span class="f11 title">開始日</span><span class="f13">2020/10/10</span></div>
+                <div class="end"><span class="f11 title">終了日</span><span class="f13">2021/10/10</span></div>
+              </div>
+              <div class="support">
+                <ul>
+                  <li><a href="" class="f11"><i class="far fa-envelope"></i>サポート</a><a href="" class="f11"><i class="far fa-question-circle"></i>ヘルプ</a></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+    </transition>
+    </div>
+  </header>
+  <div class="flexbox">
+    <aside class="sidebar none--sp">
+      <div class="nav">
+        <ul>
+          <li><a href="userDashboard.html"><i class="fas fa-tachometer-alt"></i>ダッシュボード</a></li>
+          <li><a href="userSkills.html"><i class="fas fa-file-alt"></i>習得スキル一覧</a></li>
+          <li><a href="userRank.html"><i class="fas fa-random"></i>ランキング</a></li>
+          <li class="current"><a href="userCourse.html"><i class="fas fa-tasks"></i>コース一覧</a></li>
+          <li><a href="userConfig.html"><i class="fas fa-cog"></i>設定</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="user">
+          <div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>
+          <div class="username b f13">Mamoru Nishizawa</div>
+          <div class="userbelong"><span class="f11 title">所属</span><span class="f13">研修事業部</span></div>
+        </div>
+        <div class="date">
+          <div class="start"><span class="f11 title">開始日</span><span class="f13">2020/10/10</span></div>
+          <div class="end"><span class="f11 title">終了日</span><span class="f13">2021/10/10</span></div>
+        </div>
+        <div class="support">
+          <ul>
+            <li><a href="" class="f11"><i class="far fa-envelope"></i>サポート</a><a href="" class="f11"><i class="far fa-question-circle"></i>ヘルプ</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <section class="usercourse usercourse-a">
+        <h2 class="f16 b">受講中のコース一覧</h2>
+        <div class="usercourse-cont">
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
+      <section class="usercourse usercourse-b">
+        <h2 class="f16 b">他のコース一覧</h2>
+        <div class="usercourse-cont">
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="usercourse-box box">
+              <div class="usercourse-img"><img src="img/common/course-img.png" srcset="img/common/course-img.png 1x, img/common/course-img-2x.png 2x" class="img--fit" alt="コースサムネイル"></div>
+              <div class="usercourse-inner">
+                <p class="usercourse-catch b f11">0から自走できるAI人材を目指す</p>
+                <h3 class="usercourse-title b f16">キカガク長期コース </h3>
+                <ul class="course-tags">
+                  <li class="course-tags--video">24 videos</li>
+                  <li class="course-tags--time">200 hrs</li>
+                  <li class="course-tags--tag">機械学習 / Webアプリ</li>
+                </ul>
+                <p class="course-price b f16 right">¥792,000</p>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+    <script src="js/lib/ofi.js"></script>
+    <script src="js/common.js"></script>
+    <script>objectFitImages();</script>
+  </body>
+  </html>

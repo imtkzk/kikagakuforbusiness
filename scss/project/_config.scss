@@ -1,0 +1,312 @@
+// main: ../style.scss
+
+.config-profile {
+  width: 100%;
+  margin-bottom: vw-sp(20);
+  .leftbox {
+    width: 100%;
+    text-align: center;
+  }
+  .rightbox {
+    width: 100%;
+  }
+  .user {
+    margin-right: vw-sp(10);
+  }
+  .userimg {
+    width: vw-sp(120);
+    height: vw-sp(120);
+    border-radius: 50%;
+    margin: 0 auto vw-sp(5);
+  }
+  .userbelong {
+    text-align: center;
+    color: #888;
+    .title {
+      margin-right: vw-sp(5);
+    }
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    margin-top: vw-sp(10);
+  }
+  .change-img {
+    margin-bottom: vw-sp(20);
+    span.btn {
+      width: vw-sp(260);
+      height: vw-sp(60);
+      margin-right: vw-sp(10);
+    }
+  }
+  .change-username {
+    width: 100%;
+    .input-text {
+      margin-right: vw-sp(10);
+    }
+    span.btn {
+      width: vw-sp(120);
+      height: vw-sp(60);
+    }
+  }
+}
+.config-pass {
+  margin-bottom: vw-sp(20);
+  width: 100%;
+  input {
+    margin-top: vw-sp(10);
+  }
+  span.btn {
+    margin-top: vw-sp(10);
+    width: vw-sp(120);
+    height: vw-sp(60);
+    margin-left: auto;
+  }
+}
+.config-learn-progres {
+  position: relative;
+  width: 100%;
+  padding-bottom: vw-sp(20);
+  .box {
+    padding: 0 vw-sp(20) vw-sp(20);
+    justify-content: space-between;
+  }
+  .learnlist {
+    width: 100%;
+    overflow-y: scroll;
+    height: 50vh;
+    li {
+      display: flex;
+      align-items: center;
+      height: vw-sp(100);
+      border-bottom: vw-sp(1) solid #ccc;
+    }
+    li:last-child {
+      border: none;
+    }
+    input[type="radio"] + span {
+      padding-left: vw-sp(80);
+    }
+    input[type="radio"] + span::before {
+      width: vw-sp(40);
+      height: vw-sp(40);
+      border: 1px solid $color-blue;
+      left: vw-sp(10);
+      border-radius: vw-sp(5);
+    }
+    input[type="radio"]:checked + span::after {
+      width: vw-sp(28);
+      height: vw-sp(28);
+      left: vw-sp(18);
+      border-radius: vw-sp(5);
+    }
+  }
+  .chang-deadline {
+    width: 100%;
+    margin-top: vw-sp(20);
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .date-picker {
+        margin: 0 vw-sp(10);
+      }
+    }
+    span.btn {
+      width: vw-sp(280);
+      height: vw-sp(80);
+    }
+  }
+  .box {
+    margin-bottom: vw-sp(20);
+  }
+}
+@media screen and (min-width: $breakpoint1) {
+  .config-profile {
+    margin-bottom: 0;
+    width: vw-pc(725);
+    .leftbox {
+      width: vw-pc(250);
+    }
+    .user {
+      margin-right: vw-pc(10);
+    }
+    .userimg {
+      width: vw-pc(60);
+      height: vw-pc(60);
+      margin: 0 auto vw-pc(5);
+    }
+    .userbelong {
+      .title {
+        margin-right: vw-pc(5);
+      }
+    }
+    .form {
+      margin-top: vw-pc(10);
+    }
+    .change-img {
+      margin-bottom: vw-pc(20);
+      span.btn {
+        width: vw-pc(130);
+        height: vw-pc(30);
+        margin-right: vw-pc(10);
+      }
+    }
+    .change-username {
+      .input-text {
+        margin-right: vw-pc(10);
+      }
+      span.btn {
+        width: vw-pc(65);
+        height: vw-pc(40);
+      }
+    }
+  }
+  .config-pass {
+    margin-bottom: 0;
+    width: vw-pc(435);
+    input {
+      margin-top: vw-pc(10);
+    }
+    span.btn {
+      margin-top: vw-pc(10);
+      width: vw-pc(65);
+      height: vw-pc(40);
+    }
+  }
+  .config-learn-progres {
+    .box {
+      padding: 0 vw-pc(20);
+      margin-bottom: 0;
+    }
+    .learnlist {
+      li {
+        height: vw-pc(60);
+        border-bottom: vw-pc(1) solid #ccc;
+      }
+      input[type="radio"] + span {
+        padding-left: vw-pc(40);
+      }
+      input[type="radio"] + span::before {
+        width: vw-pc(20);
+        height: vw-pc(20);
+        border: 1px solid $color-blue;
+        left: vw-pc(10);
+        border-radius: vw-pc(5);
+      }
+      input[type="radio"]:checked + span::after {
+        width: vw-pc(14);
+        height: vw-pc(14);
+        left: vw-pc(14);
+        border-radius: vw-pc(5);
+      }
+    }
+    .chang-deadline {
+      width: vw-pc(360);
+      margin-top: vw-pc(20);
+      .flexbox {
+        .date-picker {
+          margin: 0 vw-pc(10);
+        }
+      }
+      span.btn {
+        width: vw-pc(160);
+        height: vw-pc(40);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+  .config-profile {
+    width: 50%;
+    .leftbox {
+      width: 250px;
+    }
+    .user {
+      margin-right: 10px;
+    }
+    .userimg {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 5px;
+    }
+    .userbelong {
+      .title {
+        margin-right: 5px;
+      }
+    }
+    .form {
+      margin-top: 10px;
+    }
+    .change-img {
+      margin-bottom: 20px;
+      span.btn {
+        width: 130px;
+        height: 30px;
+        margin-right: 10px;
+      }
+    }
+    .change-username {
+      .input-text {
+        margin-right: 10px;
+      }
+      span.btn {
+        width: 65px;
+        height: 40px;
+      }
+    }
+  }
+  .config-pass {
+    width: calc(50% - 10px);
+    input {
+      margin-top: 10px;
+    }
+    span.btn {
+      margin-top: 10px;
+      width: 65px;
+      height: 40px;
+    }
+  }
+  .config-learn-progres {
+    .box {
+      padding: 0 20px;
+    }
+    .learnlist {
+      li {
+        height: 60px;
+        border-bottom: 1px solid #ccc;
+      }
+      input[type="radio"] + span {
+        padding-left: 40px;
+      }
+      input[type="radio"] + span::before {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-blue;
+        left: 10px;
+        border-radius: 5px;
+      }
+      input[type="radio"]:checked + span::after {
+        width: 14px;
+        height: 14px;
+        left: 14px;
+        border-radius: 5px;
+      }
+    }
+    .chang-deadline {
+      width: 40%;
+      margin-top: 20px;
+      .flexbox {
+        justify-content: center;
+        .date-picker {
+          margin: 0 10px;
+        }
+      }
+      span.btn {
+        width: 160px;
+        height: 40px;
+      }
+    }
+  }
+}

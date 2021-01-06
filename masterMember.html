@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>キカガク For Business</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="img/icon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body id="masterMember">
+  <header id="header" class="header">
+    <div class="header-logo">
+      <h1 class="font2 spacing"><a href="#"><img src="img/common/headerlogo.png" srcset="img/common/headerlogo.png 1x,img/common/headerlogo-2x.png 2x" class="img--fit" alt="キカガクForBusiness"></a></h1>
+    </div>
+    <div class="cmn-btn--white">
+      <a href="userDashboard.html" class="b f14 spacing">ユーザー画面へ</a>
+    </div>
+    <div id="hamburger">
+      <div class="hamburger_btn" @click='ActiveBtn=!ActiveBtn'>
+        <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+        <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+        <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+      </div>
+      <transition name="menu">
+        <div class="menu" v-show="ActiveBtn">
+          <aside class="sidebar">
+            <div class="nav">
+              <ul>
+                <li><a href="masterDashboard.html"><i class="fas fa-tachometer-alt"></i>ダッシュボード</a></li>
+                <li class="current"><a href="masterMember.html"><i class="fas fa-users"></i>メンバー</a></li>
+                <li><a href="masterQuestionnaire.html"><i class="far fa-edit"></i>アンケート</a></li>
+              </ul>
+            </div>
+            <div class="sidebar-bottom">
+              <div class="user">
+                <div class="username b f13"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                <div class="userbelong"><span class="f11 title">所属</span><span class="f13">研修事業部</span></div>
+              </div>
+              <div class="date">
+                <div class="start"><span class="f11 title">開始日</span><span class="f13">2020/10/10</span></div>
+                <div class="end"><span class="f11 title">終了日</span><span class="f13">2021/10/10</span></div>
+              </div>
+              <div class="support">
+                <ul>
+                  <li><a href="" class="f11"><i class="far fa-envelope"></i>サポート</a><a href="" class="f11"><i class="far fa-question-circle"></i>ヘルプ</a></li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+    </transition>
+    </div>
+  </header>
+  <div class="flexbox">
+    <aside class="sidebar none--sp">
+      <div class="nav">
+        <ul>
+          <li><a href="masterDashboard.html"><i class="fas fa-tachometer-alt"></i>ダッシュボード</a></li>
+          <li class="current"><a href="masterMember.html"><i class="fas fa-users"></i>メンバー</a></li>
+          <li><a href="masterQuestionnaire.html"><i class="far fa-edit"></i>アンケート</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="user">
+          <div class="username b f13"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+          <div class="userbelong"><span class="f11 title">所属</span><span class="f13">研修事業部</span></div>
+        </div>
+        <div class="date">
+          <div class="start"><span class="f11 title">開始日</span><span class="f13">2020/10/10</span></div>
+          <div class="end"><span class="f11 title">終了日</span><span class="f13">2021/10/10</span></div>
+        </div>
+        <div class="support">
+          <ul>
+            <li><a href="" class="f11"><i class="far fa-envelope"></i>サポート</a><a href="" class="f11"><i class="far fa-question-circle"></i>ヘルプ</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="flexbox">
+          <section class="memberlist box">
+              <div class="table">
+                <ul class="thead">
+                  <li>
+                    <div class="user-name f13">名前</div>
+                    <div class="movie-rating f13">動画視聴率</div>
+                  </li>
+                </ul>
+                 <ul class="tbody">
+                  <a href="" class="current-member">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                  <a href="">
+                    <li>
+                      <div class="user-name b"><div class="userimg"><img src="img/common/userimg.png" srcset="img/common/userimg.png 1x,img/common/userimg-2x.png 2x" alt="ユーザー画像" class="img--fit"></div>Mamoru Nishizawa</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div></div>
+                    </li>
+                  </a>
+                 </ul>
+              </div>
+          </section>
+          <div class="rightcont">
+          <section class="learn-status">
+            <h2 class="f13 spacing">学習状況</h2>
+            <div class="learn-status-inner box">
+              <div class="date-picker">
+                <p class="f13">
+                  <v-icon @click="clickShow(calendarDate)"><span class="b f11">▼ </span>mdi-calendar</v-icon>
+                </p>
+                <template>
+                  <v-app>
+                    <div v-if="calendarDate.show == true">
+                      <v-date-picker
+                        locale="jp-ja"
+                        range
+                        v-model="testRange"
+                        :max="testMax"
+                        :min="testMin"
+                        :day-format="date => new Date(date).getDate()"
+                        no-title>
+                      </v-date-picker>
+                    </div>
+                  </v-app>
+                </template>
+              </div>
+              <canvas id="mybarChartMember01"></canvas>        
+            </div>
+          </section>
+          <section class="learn-progress">
+            <h2 class="f13 spacing">動画進捗</h2>
+            <div class="learn-progress-inner box">
+              <div id="table" class="table">
+                <ul class="thead">
+                  <li>
+                    <div class="course-name f13">コース</div>
+                    <div class="movie-rating f13">動画視聴率</div>
+                    <div class="test-rating f13">テスト完了数</div>
+                  </li>
+                </ul>
+                <div class="tbody-wrap">
+                  <ul class="tbody">
+                    <li class="btnClick">
+                      <div class="course-name b contents-title">ディープラーニングハンズオン</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                      <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                    </li>
+                    <div class="innercontents">
+                      <ul>
+                        <li class="btnClick">
+                          <div class="course-name b contents-title">セクション01</div>
+                          <div class="movie-rating"><div class="bar-out  bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                          <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                        </li>
+                        <div class="innercontents">
+                          <ul>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-caution"><div class="bar-in" style="width: 10%;"></div></div><div class="caution f13 b">20%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule caution">10</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-attention"><div class="bar-in" style="width: 20%;"></div></div><div class="attention f13 b">10%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule attention">20</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ul>
+                    </div>
+                    </li>
+                  </ul>
+                  <ul class="tbody">
+                    <li class="btnClick">
+                      <div class="course-name b contents-title">ディープラーニングハンズオン</div>
+                      <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                      <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                    </li>
+                    <div class="innercontents">
+                      <ul>
+                        <li class="btnClick">
+                          <div class="course-name b contents-title">セクション01</div>
+                          <div class="movie-rating"><div class="bar-out  bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                          <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                        </li>
+                        <div class="innercontents">
+                          <ul>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-caution"><div class="bar-in" style="width: 10%;"></div></div><div class="caution f13 b">20%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule caution">10</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-attention"><div class="bar-in" style="width: 20%;"></div></div><div class="attention f13 b">10%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule attention">20</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                            <li>
+                              <div class="course-name b contents-title">Python基礎1</div>
+                              <div class="movie-rating"><div class="bar-out bar-smooth"><div class="bar-in" style="width: 60%;"></div></div><div class="smooth f13 b">60%</div></div>
+                              <div class="test-rating"><div class="number spacing b"><span class="molecule smooth">35</span><span class="denominator">/ 50</span></div></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </ul>
+                    </div>
+                    </li>
+                  </ul>
+              </div>
+             </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
+    <script src="js/lib/ofi.js"></script>
+    <script src="js/common.js"></script>
+    <script>objectFitImages();</script>
+    <script>
+    var ctx = document.getElementById("mybarChartMember01");
+    var mybarChartMember01= new Chart(ctx, {
+      type: 'bar', // チャートのタイプ
+          data: { // チャートの内容
+              labels: ["1/1", "1/2", "1/3", "1/4", "1/5", "1/6", "1/7", "1/6", "1/8", "1/10"],
+              datasets: [{
+                  type: 'line',
+                  label: 'テスト完了数',
+                  lineTension: 0,
+                  fill: false,
+                  data: [10, 14, 6, 8, 1, 4, 14, 6, 8, 1, 4],
+                  borderColor: '#007dbd',
+                  backgroundColor: '#007dbd',
+                  borderWidth: 2
+              },{
+                label: '動画完了視聴数',
+                data: [1, 19, 3, 5, 2, 3, 19, 3, 5, 2, 3],
+                backgroundColor: '#25a2aa',
+                borderWidth: 0
+            }]
+          },
+          options: { // チャートのその他オプション
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+    });
+    </script>
+  </body>
+  </html>

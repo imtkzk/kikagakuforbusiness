@@ -1,0 +1,196 @@
+// main: ../style.scss
+#userCourse .main {
+  a {
+    transition: 0.3s ease all;
+    width: 100%;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+}
+
+.course-tags {
+  background-color: #f8f8f8;
+}
+.course-tags li {
+  position: relative;
+}
+.course-tags li:before {
+  content: "";
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  display: inline-block;
+  width: vw-sp(27);
+  height: vw-sp(27);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.course-tags--video:before {
+  background-image: url(../img/course/video.png);
+}
+.course-tags--time:before {
+  background-image: url(../img/course/time.png);
+}
+.course-tags--tag:before {
+  background-image: url(../img/course/tag.png);
+}
+
+.usercourse-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .usercourse-box {
+    padding: 0px;
+    margin-right: vw-sp(10);
+    width: 100%;
+    display: flex;
+    margin-bottom: vw-sp(20);
+    .usercourse-img {
+      width: 30%;
+      height: 100%;
+    }
+    .usercourse-inner {
+      width: 70%;
+      padding: vw-sp(10);
+    }
+    .usercourse-catch {
+      color: $color-blue;
+      margin-bottom: vw-sp(5);
+    }
+    .usercourse-title {
+      margin-bottom: vw-sp(10);
+    }
+    .course-tags {
+      margin-bottom: vw-sp(10);
+      padding: vw-sp(5);
+    }
+    .course-tags li {
+      font-size: vw-sp(20);
+      padding-left: vw-sp(40);
+      margin-bottom: vw-sp(5);
+      display: inline-block;
+    }
+    .course-tags li:last-child {
+      display: block;
+    }
+    .course-tags li:before {
+      width: vw-sp(20);
+      height: vw-sp(20);
+      top: vw-sp(9);
+      left: vw-sp(10);
+    }
+  }
+}
+.usercourse-b {
+  margin-top: vw-sp(10);
+}
+
+@media screen and (min-width: $breakpoint1) {
+  #userCourse .main {
+    overflow-y: scroll;
+    padding-bottom: vw-pc(20);
+    padding-right: vw-pc(10);
+    height: calc(100vh - 65px);
+    a {
+      transition: 0.3s ease all;
+      width: auto;
+    }
+    a:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .course-tags {
+    background-color: #f8f8f8;
+  }
+  .course-tags li {
+    position: relative;
+  }
+  .course-tags li:before {
+    content: "";
+    position: absolute;
+    top: 0.4em;
+    left: 0.6em;
+    display: inline-block;
+    width: vw-sp(27);
+    height: vw-sp(27);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .usercourse-cont {
+    .usercourse-box {
+      display: block;
+      width: vw-pc(285);
+      margin-right: vw-pc(10);
+      margin-bottom: 0;
+      .usercourse-img {
+        width: 100%;
+      }
+      .usercourse-inner {
+        padding: vw-pc(10);
+        width: 100%;
+      }
+      .usercourse-catch {
+        margin-bottom: vw-pc(5);
+      }
+      .usercourse-title {
+        margin-bottom: vw-pc(10);
+      }
+      .course-tags {
+        margin-bottom: vw-pc(10);
+        padding: vw-pc(5);
+      }
+      .course-tags li {
+        font-size: vw-pc(11);
+        padding-left: vw-pc(30);
+        margin-bottom: vw-pc(5);
+      }
+      .course-tags li:before {
+        width: vw-pc(15);
+        height: vw-pc(15);
+        top: vw-pc(1);
+        left: vw-pc(10);
+      }
+    }
+  }
+  .usercourse-b {
+    margin-top: vw-pc(10);
+  }
+}
+@media screen and (min-width: $breakpoint2) {
+  .usercourse-cont {
+    .usercourse-box {
+      width: 285px;
+      margin-right: 10px;
+      .usercourse-inner {
+        padding: 10px;
+      }
+      .usercourse-catch {
+        margin-bottom: 5px;
+      }
+      .usercourse-title {
+        margin-bottom: 10px;
+      }
+      .course-tags {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      .course-tags li {
+        font-size: 11px;
+        padding-left: 30px;
+        margin-bottom: 5px;
+      }
+      .course-tags li:before {
+        width: 15px;
+        height: 15px;
+        top: 1px;
+        left: 10px;
+      }
+    }
+  }
+  .usercourse-b {
+    margin-top: 10px;
+  }
+}
