@@ -8,14 +8,14 @@
 @import "layout/header";
 @import "layout/main";
 @import "layout/sidebar";
-@import "layout/userDashboard";
 
 @import "component/button";
+@import "component/learncontents";
+@import "component/progress";
+@import "component/learn-progress";
+@import "component/learn-status";
 
-@import "project/learncontents";
-@import "project/progress";
-@import "project/learn-progress";
-@import "project/learn-status";
+@import "project/userDashboard";
 @import "project/level";
 @import "project/userrank";
 @import "project/usercourse";

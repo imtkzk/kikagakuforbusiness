@@ -914,72 +914,6 @@ i {
   }
 }
 
-/*  userDashboard
-------------------------------------------------------------------------------*/
-#userDashboard .main {
-  height: auto;
-}
-
-#userDashboard .learncontents {
-  width: 100%;
-}
-
-#userDashboard .learn-status {
-  width: 100%;
-}
-
-#userDashboard .learn-progress {
-  width: 100%;
-}
-
-#userDashboard .learn-progress .tbody-wrap {
-  max-height: 100%;
-}
-
-#userDashboard .progress {
-  width: 100%;
-  margin-top: 2.94118vw;
-}
-
-@media screen and (min-width: 769px) {
-  #userDashboard .main {
-    height: calc(100vh - 85px);
-  }
-  #userDashboard .learncontents {
-    width: 38.19444vw;
-  }
-  #userDashboard .learn-status {
-    width: 30.90278vw;
-  }
-  #userDashboard .learn-progress {
-    width: 49.30556vw;
-  }
-  #userDashboard .learn-progress .tbody-wrap {
-    max-height: 23.61111vw;
-  }
-  #userDashboard .progress {
-    width: 42.36111vw;
-    margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 1441px) {
-  #userDashboard .learncontents {
-    width: 50%;
-  }
-  #userDashboard .learn-status {
-    width: calc(50% - 10px);
-    margin-top: 10px;
-  }
-  #userDashboard .learn-progress {
-    width: 50%;
-    margin-top: 10px;
-  }
-  #userDashboard .progress {
-    width: calc(50% - 10px);
-  }
-}
-
 /*  button
 ------------------------------------------------------------------------------*/
 /* ---------------------------------- btn */
@@ -1444,6 +1378,72 @@ i {
     width: 183px;
     height: 30px;
     margin-bottom: 20px;
+  }
+}
+
+/*  userDashboard
+------------------------------------------------------------------------------*/
+#userDashboard .main {
+  height: auto;
+}
+
+#userDashboard .learncontents {
+  width: 100%;
+}
+
+#userDashboard .learn-status {
+  width: 100%;
+}
+
+#userDashboard .learn-progress {
+  width: 100%;
+}
+
+#userDashboard .learn-progress .tbody-wrap {
+  max-height: 100%;
+}
+
+#userDashboard .progress {
+  width: 100%;
+  margin-top: 2.94118vw;
+}
+
+@media screen and (min-width: 769px) {
+  #userDashboard .main {
+    height: calc(100vh - 85px);
+  }
+  #userDashboard .learncontents {
+    width: 38.19444vw;
+  }
+  #userDashboard .learn-status {
+    width: 30.90278vw;
+  }
+  #userDashboard .learn-progress {
+    width: 49.30556vw;
+  }
+  #userDashboard .learn-progress .tbody-wrap {
+    max-height: 23.61111vw;
+  }
+  #userDashboard .progress {
+    width: 42.36111vw;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  #userDashboard .learncontents {
+    width: 50%;
+  }
+  #userDashboard .learn-status {
+    width: calc(50% - 10px);
+    margin-top: 10px;
+  }
+  #userDashboard .learn-progress {
+    width: 50%;
+    margin-top: 10px;
+  }
+  #userDashboard .progress {
+    width: calc(50% - 10px);
   }
 }
 
